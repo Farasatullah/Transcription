@@ -11,7 +11,7 @@ import SwiftUI
 struct TranscriptionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MediaTranscriberView()
         }
     }
 }

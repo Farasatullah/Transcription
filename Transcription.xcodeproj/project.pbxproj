@@ -14,6 +14,7 @@
 		D07DF6572DFC07510043AB83 /* TranscriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DF6562DFC07510043AB83 /* TranscriptionTests.swift */; };
 		D07DF6612DFC07510043AB83 /* TranscriptionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DF6602DFC07510043AB83 /* TranscriptionUITests.swift */; };
 		D07DF6632DFC07510043AB83 /* TranscriptionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DF6622DFC07510043AB83 /* TranscriptionUITestsLaunchTests.swift */; };
+		D07DF6792DFC13950043AB83 /* MediaTranscriberKit in Frameworks */ = {isa = PBXBuildFile; productRef = D07DF6782DFC13950043AB83 /* MediaTranscriberKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		D07DF65C2DFC07510043AB83 /* TranscriptionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranscriptionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07DF6602DFC07510043AB83 /* TranscriptionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionUITests.swift; sourceTree = "<group>"; };
 		D07DF6622DFC07510043AB83 /* TranscriptionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D07DF6772DFC137A0043AB83 /* MediaTranscriberKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MediaTranscriberKit; path = ../MediaTranscriberKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07DF6792DFC13950043AB83 /* MediaTranscriberKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +77,12 @@
 		D07DF6392DFC074D0043AB83 = {
 			isa = PBXGroup;
 			children = (
+				D07DF6762DFC137A0043AB83 /* Packages */,
 				D07DF6442DFC074E0043AB83 /* Transcription */,
 				D07DF6552DFC07510043AB83 /* TranscriptionTests */,
 				D07DF65F2DFC07510043AB83 /* TranscriptionUITests */,
 				D07DF6432DFC074E0043AB83 /* Products */,
+				D07DF6752DFC12600043AB83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +132,21 @@
 			path = TranscriptionUITests;
 			sourceTree = "<group>";
 		};
+		D07DF6752DFC12600043AB83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D07DF6762DFC137A0043AB83 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				D07DF6772DFC137A0043AB83 /* MediaTranscriberKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +163,9 @@
 			dependencies = (
 			);
 			name = Transcription;
+			packageProductDependencies = (
+				D07DF6782DFC13950043AB83 /* MediaTranscriberKit */,
+			);
 			productName = Transcription;
 			productReference = D07DF6422DFC074E0043AB83 /* Transcription.app */;
 			productType = "com.apple.product-type.application";
@@ -420,6 +443,8 @@
 				DEVELOPMENT_TEAM = V6CZUL3B24;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The microphone is used to capture or analyze audio when recording or processing sound for transcription. No audio is stored or shared without your consent.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses Apple’s speech recognition to transcribe audio and video files into text. Your content is processed securely on-device whenever possible.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +474,8 @@
 				DEVELOPMENT_TEAM = V6CZUL3B24;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The microphone is used to capture or analyze audio when recording or processing sound for transcription. No audio is stored or shared without your consent.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses Apple’s speech recognition to transcribe audio and video files into text. Your content is processed securely on-device whenever possible.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -583,6 +610,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D07DF6782DFC13950043AB83 /* MediaTranscriberKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MediaTranscriberKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D07DF63A2DFC074D0043AB83 /* Project object */;
 }
